@@ -1,0 +1,7 @@
+success = 'success'
+failed = 'failed'
+code = 'code'
+message = 'message'
+error = 'error'
+data = 'data'
+application_json = 'application/json'

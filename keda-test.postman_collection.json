@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "3f798e4a-03fe-4c9e-81d7-0e3e3054cfec",
+		"name": "keda-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9850732"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "localhost:8069/api/material?type=jeans",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"material"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "jeans"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"M01\",\r\n    \"name\": \"Jeans1\",\r\n    \"type\": \"jeans\",\r\n    \"buy_price\": 100,\r\n    \"related_supplier\": \"supplier 1\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8069/api/material",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"material"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jeans1\",\r\n    \"type\": \"jeans\",\r\n    \"buy_price\": 102,\r\n    \"related_supplier\": \"supplier1\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8069/api/material/M01",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"material",
+						"M01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jeans1\",\r\n    \"type\": \"jeans\",\r\n    \"buy_price\": 102,\r\n    \"related_supplier\": \"supplier1\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8069/api/material/M01",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"material",
+						"M01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
